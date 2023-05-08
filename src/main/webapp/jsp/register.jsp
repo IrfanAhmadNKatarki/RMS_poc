@@ -1,90 +1,75 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
- <html>
+<html>
 
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-            <title>Registration</title>
-        </head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registration</title>
+</head>
 
-        <body>
-            <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">
+<body>
+	<form:form id="regForm" modelAttribute="user" action="registerProcess"
+		method="post">
 
-                <table align="center">
-                    <tr>
-                        <td>
-                            <form:label path="username">Username</form:label>
-                        </td>
-                        <td>
-                            <form:input path="username" name="username" id="username" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="password">Password</form:label>
-                        </td>
-                        <td>
-                            <form:password path="password" name="password" id="password" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="firstname">FirstName</form:label>
-                        </td>
-                        <td>
-                            <form:input path="firstname" name="firstname" id="firstname" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="lastname">LastName</form:label>
-                        </td>
-                        <td>
-                            <form:input path="lastname" name="lastname" id="lastname" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="email">Email</form:label>
-                        </td>
-                        <td>
-                            <form:input path="email" name="email" id="email" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="address">Address</form:label>
-                        </td>
-                        <td>
-                            <form:input path="address" name="address" id="address" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form:label path="phone">Phone</form:label>
-                        </td>
-                        <td>
-                            <form:input path="phone" name="phone" id="phone" />
-                        </td>
-                    </tr>
+		<table align="center">
 
-                    <tr>
-                        <td></td>
-                        <td>
-                            <form:button id="register" name="register">Register</form:button>
-                        </td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td></td>
-                        <td><a href="home.jsp">Home</a>
-                        </td>
-                    </tr>
-                </table>
-            </form:form>
+			<label for="role">Select Role:</label>
+			<select name="role" id="role">
+				<option value="1">Customer Support Agent</option>
+				<option value="2">Customer</option>
+			</select>
+			<br>
+			<br>
+			<tr>
+				<td><form:label path="username">Username</form:label></td>
+				<td><form:input path="username" name="username" id="username" />
+				</td>
+			</tr>
+			<tr>
+				<td><form:label path="password">Password</form:label></td>
+				<td><form:password path="password" name="password"
+						id="password" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="firstname">FirstName</form:label></td>
+				<td><form:input path="firstname" name="firstname"
+						id="firstname" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="lastname">LastName</form:label></td>
+				<td><form:input path="lastname" name="lastname" id="lastname" />
+				</td>
+			</tr>
+			<tr>
+				<td><form:label path="email">Email</form:label></td>
+				<td><form:input path="email" name="email" id="email" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="address">Address</form:label></td>
+				<td><form:input path="address" name="address" id="address" />
+				</td>
+			</tr>
+			<tr>
+				<td><form:label path="phone">Phone</form:label></td>
+				<td><form:input path="phone" name="phone" id="phone" /></td>
+			</tr>
 
-        </body>
+			<tr>
+				<td></td>
+				<td><form:button id="register" name="register">Register</form:button>
+				</td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td></td>
+				<td><a href="home">Home</a></td>
+			</tr>
+			
+		</table>
+	</form:form>
 
-        </html>
+</body>
+
+</html>

@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 	  @Override
 	public User validateUser(Login login) {
 		// TODO Auto-generated method stub
-		return userDao.validateUser(login);
+		return userDao.validateUser(login);	
 	}
 
 	}

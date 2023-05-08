@@ -1,68 +1,85 @@
 package com.rms.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class User {
 
+	private int role;
 	private String username;
-	  private String password;
-	  private String firstname;
-	  private String lastname;
-	  private String email;
-	  private String address;
-	  private int phone;
+	private String password;
+	private String firstname;
+	private String lastname;
+	private String email;
+	private String address;
+	private int phone;
 
-	  public String getUsername() {
-	  return username;
-	  }
 
-	  public void setUsername(String username) {
-	  this.username = username;
-	  }
 
-	  public String getPassword() {
-	  return password;
-	  }
 
-	  public void setPassword(String password) {
-	  this.password = password;
-	  }
 
-	  public String getFirstname() {
-	  return firstname;
-	  }
+	public int getRole() {
+		return role;
+	}
 
-	  public void setFirstname(String firstname) {
-	  this.firstname = firstname;
-	  }
+	public void setRole(int role) {
+		this.role = role;
+	}
 
-	  public String getLastname() {
-	  return lastname;
-	  }
+	public String getUsername() {
+		return username;
+	}
 
-	  public void setLastname(String lastname) {
-	  this.lastname = lastname;
-	  }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-	  public String getEmail() {
-	  return email;
-	  }
+	public String getPassword() {
+		return password;
+	}
 
-	  public void setEmail(String email) {
-	  this.email = email;
-	  }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-	  public String getAddress() {
-	  return address;
-	  }
+	public String getFirstname() {
+		return firstname;
+	}
 
-	  public void setAddress(String address) {
-	  this.address = address;
-	  }
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
 
-	  public int getPhone() {
-	  return phone;
-	  }
+	public String getLastname() {
+		return lastname;
+	}
 
-	  public void setPhone(int phone) {
-	  this.phone = phone;
-	  }
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
 }
