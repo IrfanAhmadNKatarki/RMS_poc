@@ -29,6 +29,11 @@ public class UserDaoImpl implements UserDao{
 		
 		String sql = "insert into users values(?,?,?,?,?,?,?)";
 		
+		String userRoleSql = "INSERT INTO user_role (user_id, role_id) VALUES (?, ?)";
+		
+//		jdbcTemplate.update(sql2, new Object[] {user.getUsername(), user.getRole()});
+		
+		jdbcTemplate.update(userRoleSql, new Object[] {user.getUsername(), user.getRole()});
 		
 	    return jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getFirstname(),
 	    user.getLastname(), user.getEmail(), user.getAddress(), user.getPhone() });
@@ -62,7 +67,7 @@ class UserMapper implements RowMapper<User> {
 	    user.setEmail(rs.getString("email"));
 	    user.setAddress(rs.getString("address"));
 	    user.setPhone(rs.getInt("phone"));
-	   
+//	    user.setRole(rs.getInt("role"));
 
 	    return user;
 	  }
