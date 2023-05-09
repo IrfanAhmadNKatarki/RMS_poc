@@ -16,27 +16,27 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class RegistrationController {
-	
-	 @Autowired
-	  public UserService userService;
 
-	  @RequestMapping(value = "/register", method = RequestMethod.GET)
-	  public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
-	    ModelAndView mav = new ModelAndView("register");
-	    mav.addObject("user", new User());
+	@Autowired
+	public UserService userService;
 
-	    return mav;
-	  }
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView("register");
+		mav.addObject("user", new User());
 
-	  @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
-	  public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
-	  @ModelAttribute("user") User user) {
+		return mav;
+	}
 
-	  userService.register(user);
-	
-		  return new ModelAndView("welcome", "firstname", user.getFirstname());
-	  }
-	
-	
+	@RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
+	public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
+			@ModelAttribute("user") User user) {
+
+		int role = Integer.parseInt(request.getParameter("role"));
+		user.setRole(role);
+		userService.register(user);
+
+		return new ModelAndView("welcome", "firstname", user.getFirstname());
+	}
 
 }
